@@ -1,0 +1,17 @@
+:root{
+
+    /* Font sizes */
+    --heading-text: 60px;
+    --subheading-text: 32px;
+    --normal-text:24px;
+    --small-text:18px;
+
+    /* Colors */
+    --primary-background:#FFFFFF;
+    --light-rose:#FFF8F9;
+    --normal-pink:#FFDDE4;
+    --dark-pink:#DE1B41;
+    --normal-text-color:#232323;
+    --light-text:#525252;
+
+}

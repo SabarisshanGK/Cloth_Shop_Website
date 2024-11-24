@@ -1,0 +1,68 @@
+.navBar-container{
+    display: flex;
+    width: auto;
+    height: 71px;
+    background-color: var(--primary-background);
+    align-items: center;
+    gap: 300px;
+    padding-left: 50px;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.nav-logo{
+    text-decoration: none;
+    font-family: "Inter-Bold";
+    font-size: var(--subheading-text);
+    color: var(--normal-text-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline: transparent;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.nav-items{
+    color: var(--normal-text);
+    text-decoration: none;
+    font-family: "Inter-Regular";
+    font-size: var(--normal-text);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.active{
+    color: var( --dark-pink);
+    position: relative;
+}
+.active::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--dark-pink);
+}
+.nav-items::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    left: 0;
+    background-color: var(--dark-pink);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-items:hover{
+    color: var(--dark-pink);
+}
+.nav-items:hover::after{
+    opacity: 1;
+    width: 30px;
+}
