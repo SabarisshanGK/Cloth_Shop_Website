@@ -1,8 +1,28 @@
+import { IconCard } from '@components/UI'
 import '@styles/HomePage.css'
 import { getImageURL } from '@utils/image-utils'
+import { delay } from 'framer-motion'
 
 const HomePage = () => {
-  return (
+
+    const slideUpVariation = {
+      initial:{
+        opacity:0,
+        scale:0.3,
+        y:100
+      },
+      animate:{
+        opacity:1,
+        scale:1,
+        y:0,
+        transition:{
+          delay:0.3,
+          duration:2
+        }
+      }
+    }
+
+    return (
     <div className='homepage-container'>
       {/* Section 1 */}
       <div className="homepage-section1">
@@ -23,6 +43,27 @@ const HomePage = () => {
           <div className="homepage-section-1-address-content">
             <span className="homepage-section-1-address-content-text-1">No 23, Dert Street, Fest Town, Hall City,</span>
             <span className="homepage-section-1-address-content-text-2">Gerty</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 2 */}
+      <div className="homepage-section2">
+        <div className="homepage-section-2-content">
+          <div className="homepage-section-2-content-section">
+            <IconCard backgroundColor="#FFDDE4"  variation={slideUpVariation} borderRadius={20} width={150} height={150} icon={getImageURL("../assets/images/homeSection2Icon1.png")}/>
+            <h4 className='homepage-section-2-content-section-title'>Quality Product</h4>
+            <p className="homepage-section-2-content-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div className="homepage-section-2-content-section">
+          <IconCard backgroundColor="#FFDDE4" borderRadius={20} width={150} height={150} icon={getImageURL("../assets/images/HomeSection2Image2.png")}  variation={slideUpVariation}/>
+            <h4 className='homepage-section-2-content-section-title'>Best Price</h4>
+            <p className="homepage-section-2-content-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+          <div className="homepage-section-2-content-section">
+            <IconCard backgroundColor="#FFDDE4" borderRadius={20} width={150} height={150} icon={getImageURL("../assets/images/HomeSection2Image3.png")} variation={slideUpVariation}/>
+            <h4 className='homepage-section-2-content-section-title'>24/7 Support</h4>
+            <p className="homepage-section-2-content-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>

@@ -143,3 +143,40 @@ svg path{
 .homepage-section-1-address-content-text-2{
     animation: fadeIn 2s forwards 11.2s;
 }
+
+/* Section2 */
+.homepage-section2{
+    width: auto;
+    height: 600px;
+    background-color: var( --primary-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homepage-section-2-content{
+    width: 1204px;
+    height: 279px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.homepage-section-2-content-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 340px;
+    align-items: center;
+}
+.homepage-section-2-content-section-title{
+    font-family: "Inter-Medium";
+    font-size: var(--subheading-text);
+    color: var(--normal-text-color);
+}
+.homepage-section-2-content-section-description{
+    font-size: var(--normal-text);
+    color: var(--normal-text-color);
+    font-family: "Inter-Regular";
+    width: 100%;
+    text-align: center;
+}
