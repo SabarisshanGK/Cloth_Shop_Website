@@ -14,6 +14,10 @@
     src: url('./assets/fonts/Inter_18pt-Medium.ttf') format('truetype');
 }
 @font-face {
+    font-family: "Inter-Light";
+    src: url('./assets/fonts/Inter_18pt-Light.ttf') format('truetype');
+}
+@font-face {
     font-family: "Roboto-condensed-italic";
     src: url('./assets/fonts/RobotoCondensed-SemiBoldItalic.ttf') format('truetype');
 }

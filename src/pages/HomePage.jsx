@@ -1,7 +1,7 @@
 import { IconCard } from '@components/UI'
 import '@styles/HomePage.css'
 import { getImageURL } from '@utils/image-utils'
-import { delay } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const HomePage = () => {
 
@@ -21,6 +21,50 @@ const HomePage = () => {
         }
       }
     }
+    const slideLeft = {
+      initial:{
+        opacity:0,
+        x:-100
+      },
+      animate:{
+        opacity:1,
+        x:0,
+        transition:{
+          delay: 0.3,
+          duration:1
+        }
+      }
+    }
+    const slideRight = {
+      initial:{
+        opacity:0,
+        x:100
+      },
+      animate:{
+        opacity:1,
+        x:0,
+        transition:{
+          delay: 1.3,
+          duration:1
+        }
+      }
+    }
+
+    const fadeInVariation = {
+      initial:{
+        opacity:0,
+        scale:0.8
+      },
+      animate:{
+        opacity:1,
+        scale:1,
+        transition:{
+          delay: 2.3,
+          duration:1
+        }
+      }
+    }
+    
 
     return (
     <div className='homepage-container'>
@@ -64,6 +108,47 @@ const HomePage = () => {
             <IconCard backgroundColor="#FFDDE4" borderRadius={20} width={150} height={150} icon={getImageURL("../assets/images/HomeSection2Image3.png")} variation={slideUpVariation}/>
             <h4 className='homepage-section-2-content-section-title'>24/7 Support</h4>
             <p className="homepage-section-2-content-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Section 3 */}
+      <div className="homepage-section3">
+        <div className="homepage-section3-content">
+          <div className="homepage-section3-content-left-side">
+            <motion.img src={getImageURL('../assets/images/HomePageSection3Image1.png')} alt="" className='homePage-section3-left-image-1' variants={slideLeft} initial="initial" whileInView="animate" viewport={{once:true,amount:0.6}}/>
+            <motion.img src={getImageURL('../assets/images/HomePageSection3Image2.png')} alt="" className='homePage-section3-left-image-2' variants={slideRight} initial="initial" whileInView="animate" viewport={{once:true,amount:0.6}}/>
+            <motion.div className="homepage-section-3-info-card" variants={fadeInVariation} initial="initial" whileInView="animate" viewport={{once:true,amount:0.6}}>
+              <p className="homepage-section-3-info-card-number">34</p>
+              <p className="homepage-section-3-info-card-description">Years Experience</p>
+            </motion.div>
+          </div>
+          <div className="homepage-section3-content-right-side">
+            <h2 className='homepage-section3-subtitle'>Who We Are</h2>
+            <h1 className="homepage-section3-title">The best solution for garment needs</h1>
+            <p className="homepage-section3-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet gravida quis duis tellus ultrices donec sollicitudin nisl.</p>
+            <div className="homepage-section-3-list">
+              <div className="hompage-section-3-list-item">
+                <div className="hompage-section-3-list-item-circle"></div>
+                <span className="hompage-section-3-list-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing </span>
+              </div>
+              <div className="hompage-section-3-list-item">
+                <div className="hompage-section-3-list-item-circle"></div>
+                <span className="hompage-section-3-list-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing </span>
+              </div>
+              <div className="hompage-section-3-list-item">
+                <div className="hompage-section-3-list-item-circle"></div>
+                <span className="hompage-section-3-list-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing </span>
+              </div>
+              <div className="hompage-section-3-list-item">
+                <div className="hompage-section-3-list-item-circle"></div>
+                <span className="hompage-section-3-list-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing </span>
+              </div>
+              <div className="hompage-section-3-list-item">
+                <div className="hompage-section-3-list-item-circle"></div>
+                <span className="hompage-section-3-list-item-description">Lorem ipsum dolor sit amet, consectetur adipiscing </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

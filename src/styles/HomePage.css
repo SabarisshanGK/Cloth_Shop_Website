@@ -180,3 +180,114 @@ svg path{
     width: 100%;
     text-align: center;
 }
+
+/* Section 3 */
+.homepage-section3{
+    width: auto;
+    background-color: var(--light-rose);
+    height: 917px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline:40px ;
+}
+.homepage-section3-content{
+    width: 100%;
+    height: 754px;
+    display: flex;
+    gap: 40px;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+.homepage-section3-content-left-side,.homepage-section3-content-right-side{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.homepage-section3-content-right-side{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.homepage-section3-subtitle{
+    font-family: "Inter-Medium";
+    font-size: var(--subheading-text);
+    color: var(--dark-pink);
+}
+.homepage-section3-title{
+    font-family: "Roboto-condensed-italic";
+    color: var(--normal-text);
+    font-size: var(--heading-text);
+    width: 551px;
+}
+.homepage-section3-description{
+    font-family: "Inter-Regular";
+    font-size: var(--normal-text);
+    width: 543px;
+    height: 87px;
+    color: var(--normal-text-color);
+}
+.homepage-section-3-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+}
+.hompage-section-3-list-item{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.hompage-section-3-list-item-circle{
+    width: 27px;
+    height: 27px;
+    clip-path: circle();
+    background-color: var(--dark-pink);
+}
+.hompage-section-3-list-item-description{
+    font-family: "Inter-Light";
+    font-size: var(--small-text);
+    color: var(--normal-text-color);
+    width: 431px;
+}
+.homePage-section3-left-image-1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    object-fit: cover;
+}
+.homePage-section3-left-image-2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    object-fit: cover;
+}
+.homepage-section-3-info-card{
+    width: 376px;
+    height: 160px;
+    background-color: var(--primary-background);
+    position: absolute;
+    bottom: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: 306px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding-left: 30px;
+    gap: 20px;
+}
+.homepage-section-3-info-card-number{
+    font-family: "Inter-Medium";
+    font-size: 82px;
+    color: var(--dark-pink);
+}
+.homepage-section-3-info-card-description{
+    width: 177px;
+    font-family: "Inter-Light";
+    font-size: 34px;
+    color: var(--normal-text-color);
+}
